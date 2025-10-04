@@ -1,0 +1,17 @@
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\bin\Debug\net9.0\DrMeet.Domain.deps.json
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\bin\Debug\net9.0\DrMeet.Domain.dll
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\bin\Debug\net9.0\DrMeet.Domain.pdb
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\obj\Debug\net9.0\DrMeet.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\obj\Debug\net9.0\DrMeet.Domain.AssemblyInfoInputs.cache
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\obj\Debug\net9.0\DrMeet.Domain.AssemblyInfo.cs
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\obj\Debug\net9.0\DrMeet.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\obj\Debug\net9.0\DrMeet.Domain.dll
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\obj\Debug\net9.0\refint\DrMeet.Domain.dll
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\obj\Debug\net9.0\DrMeet.Domain.pdb
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\obj\Debug\net9.0\ref\DrMeet.Domain.dll
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\obj\Debug\net9.0\DrMeet.Domain.csproj.AssemblyReference.cache
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\bin\Debug\net9.0\DrMeet.Domain.Contract.dll
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\bin\Debug\net9.0\DrMeet.Framework.Core.dll
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\bin\Debug\net9.0\DrMeet.Domain.Contract.pdb
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\bin\Debug\net9.0\DrMeet.Framework.Core.pdb
+C:\Users\Parsiz\source\repos\DrMeet\ApplicationCore\DrMeet.Domain\obj\Debug\net9.0\DrMeet.D.78A9D8CD.Up2Date
