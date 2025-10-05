@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DrMeet.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+490b2cd8dea412251422458e49189831eeb8cdb9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d79af0481f6d2f839c1ab33ac62aab95d7cfcbe9")]
 [assembly: System.Reflection.AssemblyProductAttribute("DrMeet.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DrMeet.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

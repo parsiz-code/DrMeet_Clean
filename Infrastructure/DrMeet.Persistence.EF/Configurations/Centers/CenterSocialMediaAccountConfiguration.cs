@@ -9,7 +9,7 @@ namespace DrMeet.Persistence.EF.Configurations.Centers;
 /// <summary>
 /// پیکربندی Fluent API برای مدل SocialMediaAccount.
 /// </summary>
-public class SocialMediaAccountConfiguration : IEntityTypeConfiguration<CenterSocialMediaAccount>
+public class CenterSocialMediaAccountConfiguration : IEntityTypeConfiguration<CenterSocialMediaAccount>
 {
     public void Configure(EntityTypeBuilder<CenterSocialMediaAccount> builder)
     {

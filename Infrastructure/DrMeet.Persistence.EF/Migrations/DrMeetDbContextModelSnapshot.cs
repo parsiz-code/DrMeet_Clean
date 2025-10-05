@@ -160,6 +160,82 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.ToTable("Doctors", (string)null);
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.ApplicationSettings.ApplicationSetting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApiVersion")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("AppVersion")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ApplicationSettings", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.ApplicationSettings.ApplicationSettingFileUpload", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ApplicationSettingId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("MaximumSize")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("MaximumSizeFriendlyName")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.PrimitiveCollection<string>("ValidExtensions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationSettingId");
+
+                    b.ToTable("FileUploadSettings", (string)null);
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Blogs.Blog", b =>
                 {
                     b.Property<int>("Id")
@@ -361,6 +437,165 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.ToTable("Centers", (string)null);
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterDepartment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CenterId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CenterId");
+
+                    b.ToTable("CenterDepartments", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterInsurances", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CenterId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CenterId");
+
+                    b.HasIndex("Name", "CenterId")
+                        .IsUnique()
+                        .HasFilter("[CenterId] IS NOT NULL");
+
+                    b.ToTable("CenterInsurances", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterQuestionAnswer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CenterId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("Type")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CenterId");
+
+                    b.ToTable("CenterQuestionAnswers", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterQuestionAnswerCommentPoints", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CenterQuestionAnswerId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CenterQuestionAnswerId1")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsNegativePoints")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CenterQuestionAnswerId");
+
+                    b.HasIndex("CenterQuestionAnswerId1");
+
+                    b.ToTable("CenterQuestionAnswerCommentPoints", (string)null);
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterSocialMediaAccount", b =>
                 {
                     b.Property<int>("Id")
@@ -508,7 +743,9 @@ namespace DrMeet.Persistence.EF.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("Deleted")
                         .HasColumnType("bit");
@@ -522,7 +759,9 @@ namespace DrMeet.Persistence.EF.Migrations
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("UpdateDate")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("Id");
 
@@ -530,6 +769,46 @@ namespace DrMeet.Persistence.EF.Migrations
                         .IsUnique();
 
                     b.ToTable("Expertises", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Others.Holidays", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Date")
+                        .IsUnique();
+
+                    b.ToTable("Holidays", (string)null);
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Others.Insurance", b =>
@@ -541,7 +820,9 @@ namespace DrMeet.Persistence.EF.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("Deleted")
                         .HasColumnType("bit");
@@ -566,7 +847,9 @@ namespace DrMeet.Persistence.EF.Migrations
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("UpdateDate")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("Id");
 
@@ -574,6 +857,42 @@ namespace DrMeet.Persistence.EF.Migrations
                         .IsUnique();
 
                     b.ToTable("Insurances", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Others.Licenses", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Licenses");
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Others.ProviderServices", b =>
@@ -585,7 +904,9 @@ namespace DrMeet.Persistence.EF.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("Deleted")
                         .HasColumnType("bit");
@@ -602,7 +923,9 @@ namespace DrMeet.Persistence.EF.Migrations
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("UpdateDate")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("Id");
 
@@ -797,6 +1120,17 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.ApplicationSettings.ApplicationSettingFileUpload", b =>
+                {
+                    b.HasOne("DrMeet.Domain.ApplicationSettings.ApplicationSetting", "ApplicationSetting")
+                        .WithMany("FileUploadSetting")
+                        .HasForeignKey("ApplicationSettingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationSetting");
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Blogs.Blog", b =>
                 {
                     b.HasOne("DrMeet.Domain.Users.User", "User")
@@ -836,6 +1170,52 @@ namespace DrMeet.Persistence.EF.Migrations
                         .IsRequired();
 
                     b.Navigation("CenterType");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterDepartment", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Centers.Center", "Center")
+                        .WithMany("CenterDepartment")
+                        .HasForeignKey("CenterId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Center");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterInsurances", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Centers.Center", "Center")
+                        .WithMany("CenterInsurances")
+                        .HasForeignKey("CenterId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Center");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterQuestionAnswer", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Centers.Center", "Center")
+                        .WithMany("CenterQuestionAnswer")
+                        .HasForeignKey("CenterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Center");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterQuestionAnswerCommentPoints", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Centers.CenterQuestionAnswer", null)
+                        .WithMany("NegativePoints")
+                        .HasForeignKey("CenterQuestionAnswerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DrMeet.Domain.Centers.CenterQuestionAnswer", "CenterQuestionAnswer")
+                        .WithMany("PositivePoints")
+                        .HasForeignKey("CenterQuestionAnswerId1");
+
+                    b.Navigation("CenterQuestionAnswer");
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterSocialMediaAccount", b =>
@@ -901,6 +1281,11 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.ApplicationSettings.ApplicationSetting", b =>
+                {
+                    b.Navigation("FileUploadSetting");
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Blogs.Blog", b =>
                 {
                     b.Navigation("Comments");
@@ -908,9 +1293,22 @@ namespace DrMeet.Persistence.EF.Migrations
 
             modelBuilder.Entity("DrMeet.Domain.Centers.Center", b =>
                 {
+                    b.Navigation("CenterDepartment");
+
+                    b.Navigation("CenterInsurances");
+
+                    b.Navigation("CenterQuestionAnswer");
+
                     b.Navigation("CenterUser");
 
                     b.Navigation("SocialMediaAccount");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterQuestionAnswer", b =>
+                {
+                    b.Navigation("NegativePoints");
+
+                    b.Navigation("PositivePoints");
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterType", b =>
