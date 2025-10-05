@@ -35,3 +35,36 @@ public class ProviderServicesConfiguration : IEntityTypeConfiguration<ProviderSe
             .IsRequired(); // ترتیب نمایش خدمت در لیست‌ها
     }
 }
+
+/// <summary>
+/// پیکربندی Fluent API برای موجودیت <see cref="Holidays"/>.
+/// این کلاس تنظیمات مربوط به نگاشت جدول روزهای تعطیل در پایگاه داده را مشخص می‌کند.
+/// </summary>
+public class HolidaysConfiguration : IEntityTypeConfiguration<Holidays>
+{
+    /// <summary>
+    /// اعمال تنظیمات Fluent API برای موجودیت Holidays.
+    /// </summary>
+    /// <param name="builder">ابزار پیکربندی موجودیت.</param>
+    public void Configure(EntityTypeBuilder<Holidays> builder)
+    {
+        // تعیین نام جدول
+        builder.ToTable("Holidays");
+
+        // تعریف کلید اصلی
+        builder.HasKey(h => h.Id);
+
+        // تنظیم ویژگی Description: الزامی با حداکثر طول ۵۰۰ کاراکتر
+        builder.Property(h => h.Description)
+            .IsRequired()
+            .HasMaxLength(500);
+
+        // تنظیم ویژگی Date: الزامی
+        builder.Property(h => h.Date)
+            .IsRequired();
+
+        // ایندکس یکتا برای جلوگیری از ثبت تعطیلی‌های تکراری در یک تاریخ
+        builder.HasIndex(h => h.Date)
+            .IsUnique();
+    }
+}

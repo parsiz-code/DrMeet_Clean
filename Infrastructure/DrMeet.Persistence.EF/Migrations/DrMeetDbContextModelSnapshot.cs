@@ -361,6 +361,47 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.ToTable("Centers", (string)null);
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterSocialMediaAccount", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CenterId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Platform")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("UsernameOrUrl")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CenterId");
+
+                    b.ToTable("SocialMediaAccounts", (string)null);
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterType", b =>
                 {
                     b.Property<int>("Id")
@@ -416,6 +457,48 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.ToTable("CenterUsers", (string)null);
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Iran.IranCity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("ProvinceId")
+                        .HasMaxLength(36)
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProvinceId");
+
+                    b.ToTable("IranCities", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Iran.IranProvince", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("IranProvinces", (string)null);
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Others.Expertise", b =>
                 {
                     b.Property<int>("Id")
@@ -447,6 +530,50 @@ namespace DrMeet.Persistence.EF.Migrations
                         .IsUnique();
 
                     b.ToTable("Expertises", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Others.Insurance", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsBaseInsurance")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Picture")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("Insurances", (string)null);
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Others.ProviderServices", b =>
@@ -711,6 +838,17 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.Navigation("CenterType");
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterSocialMediaAccount", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Centers.Center", "Center")
+                        .WithMany("SocialMediaAccount")
+                        .HasForeignKey("CenterId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Center");
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterUser", b =>
                 {
                     b.HasOne("DrMeet.Domain.Centers.Center", "Center")
@@ -728,6 +866,17 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.Navigation("Center");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Iran.IranCity", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Iran.IranProvince", "Province")
+                        .WithMany("Cities")
+                        .HasForeignKey("ProvinceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Province");
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Others.Slider", b =>
@@ -760,11 +909,18 @@ namespace DrMeet.Persistence.EF.Migrations
             modelBuilder.Entity("DrMeet.Domain.Centers.Center", b =>
                 {
                     b.Navigation("CenterUser");
+
+                    b.Navigation("SocialMediaAccount");
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterType", b =>
                 {
                     b.Navigation("Center");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Iran.IranProvince", b =>
+                {
+                    b.Navigation("Cities");
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Users.User", b =>

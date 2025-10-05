@@ -35,3 +35,23 @@ public class Slider : BaseEntityIdentity
 
 
 }
+/// <summary>
+/// مدل روزهای تعطیل.
+/// این کلاس نمایانگر یک روز تعطیل رسمی یا مناسبتی است که می‌تواند در تقویم مرکز درمانی یا سیستم نوبت‌دهی لحاظ شود.
+/// </summary>
+public class Holidays : BaseEntityIdentity
+{
+   
+    /// <summary>
+    /// توضیح یا عنوان مناسبت تعطیل (مثلاً "تعطیلی به مناسبت عید فطر" یا "تعطیلی رسمی").
+    /// </summary>
+    public required string Description { get; set; }
+
+    /// <summary>
+    /// تاریخ دقیق تعطیلی.
+    /// از نوع DateOnly برای ذخیره فقط بخش تاریخی بدون زمان.
+    /// </summary>
+    public DateOnly Date { get; set; }
+
+ 
+}
