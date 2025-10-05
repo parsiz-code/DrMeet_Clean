@@ -9,3 +9,15 @@ C:\Users\Parsiz\source\repos\DrMeet\Framework\DrMeet.Framework.Core\obj\Debug\ne
 C:\Users\Parsiz\source\repos\DrMeet\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\refint\DrMeet.Framework.Core.dll
 C:\Users\Parsiz\source\repos\DrMeet\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\DrMeet.Framework.Core.pdb
 C:\Users\Parsiz\source\repos\DrMeet\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\ref\DrMeet.Framework.Core.dll
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\bin\Debug\net9.0\DrMeet.Framework.Core.deps.json
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\bin\Debug\net9.0\DrMeet.Framework.Core.dll
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\bin\Debug\net9.0\DrMeet.Framework.Core.pdb
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\DrMeet.Framework.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\DrMeet.Framework.Core.AssemblyInfoInputs.cache
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\DrMeet.Framework.Core.AssemblyInfo.cs
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\DrMeet.Framework.Core.csproj.CoreCompileInputs.cache
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\DrMeet.Framework.Core.sourcelink.json
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\DrMeet.Framework.Core.dll
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\refint\DrMeet.Framework.Core.dll
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\DrMeet.Framework.Core.pdb
+C:\Users\Parsiz\source\repos\DrMeet_Clean\Framework\DrMeet.Framework.Core\obj\Debug\net9.0\ref\DrMeet.Framework.Core.dll

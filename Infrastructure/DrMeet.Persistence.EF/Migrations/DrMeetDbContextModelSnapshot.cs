@@ -160,6 +160,121 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.ToTable("Doctors", (string)null);
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Blogs.Blog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SummaryText")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("Tags")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Blogs", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Blogs.BlogComment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BlogId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Score")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BlogId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("BlogComments", (string)null);
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Centers.Center", b =>
                 {
                     b.Property<int>("Id")
@@ -241,7 +356,46 @@ namespace DrMeet.Persistence.EF.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CenterTypeId");
+
                     b.ToTable("Centers", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CenterTypes", (string)null);
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterUser", b =>
@@ -260,6 +414,116 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.HasIndex("CenterId");
 
                     b.ToTable("CenterUsers", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Others.Expertise", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("Expertises", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Others.ProviderServices", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProviderServices", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Others.Slider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Sliders", (string)null);
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Patient.Patient", b =>
@@ -406,6 +670,47 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Blogs.Blog", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Users.User", "User")
+                        .WithMany("Blogs")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Blogs.BlogComment", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Blogs.Blog", "Blog")
+                        .WithMany("Comments")
+                        .HasForeignKey("BlogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DrMeet.Domain.Users.User", "User")
+                        .WithMany("BlogComments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Blog");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.Center", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Centers.CenterType", "CenterType")
+                        .WithMany("Center")
+                        .HasForeignKey("CenterTypeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("CenterType");
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterUser", b =>
                 {
                     b.HasOne("DrMeet.Domain.Centers.Center", "Center")
@@ -425,6 +730,17 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Others.Slider", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Users.User", "User")
+                        .WithMany("Sliders")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Patient.Patient", b =>
                 {
                     b.HasOne("DrMeet.Domain.Users.User", "User")
@@ -436,13 +752,27 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Blogs.Blog", b =>
+                {
+                    b.Navigation("Comments");
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Centers.Center", b =>
                 {
                     b.Navigation("CenterUser");
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterType", b =>
+                {
+                    b.Navigation("Center");
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Users.User", b =>
                 {
+                    b.Navigation("BlogComments");
+
+                    b.Navigation("Blogs");
+
                     b.Navigation("CenterUser");
 
                     b.Navigation("Doctor")
@@ -450,6 +780,8 @@ namespace DrMeet.Persistence.EF.Migrations
 
                     b.Navigation("Patient")
                         .IsRequired();
+
+                    b.Navigation("Sliders");
                 });
 #pragma warning restore 612, 618
         }

@@ -107,7 +107,7 @@ public class Center: BaseEntityIdentity
     public virtual ICollection<CenterUser> CenterUser { get; set; } = [];
 
 
-
+    public virtual CenterType? CenterType { get; set; } = new();
 
     ////خدمات قابل ارائه
     //public List<CenterService>? ServicesAvailableId { get; set; } = new();

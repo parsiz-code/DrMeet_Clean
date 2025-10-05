@@ -3,7 +3,9 @@
 namespace DrMeet.Domain.Users;
 
 using DrMeet.Domain.Base;
+using DrMeet.Domain.Blogs;
 using DrMeet.Domain.Centers;
+using DrMeet.Domain.Others;
 using DrMeet.Domain.Patient;
 using ErrorOr;
 
@@ -72,7 +74,10 @@ public  class User : BaseEntityIdentity
 
     public virtual Doctor Doctor { get; set; }
     public virtual Patient Patient { get; set; }
+    public virtual ICollection<Slider> Sliders { get; set; }
     public virtual ICollection<CenterUser> CenterUser { get; set; }
+    public virtual ICollection<Blog> Blogs { get; set; }
+    public virtual ICollection<BlogComment> BlogComments { get; set; }
     #endregion
 
 }
