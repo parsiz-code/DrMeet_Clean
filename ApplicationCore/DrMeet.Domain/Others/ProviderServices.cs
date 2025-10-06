@@ -1,4 +1,5 @@
 ﻿using DrMeet.Domain.Base;
+using DrMeet.Domain.Centers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,4 +24,9 @@ public class ProviderServices:BaseEntityIdentity
     /// مقدار عددی که می‌تواند برای مرتب‌سازی خدمات استفاده شود.
     /// </summary>
     public int Order { get; set; }
+
+    public virtual ICollection<CenterServiceSelected> CenterServices { get; set; } = [];
+    public virtual ICollection<CenterDoctorsServiceSelected> CenterDoctorsService { get; set; } = [];
+
+
 }

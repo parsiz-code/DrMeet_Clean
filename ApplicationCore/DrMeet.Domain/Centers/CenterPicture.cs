@@ -19,4 +19,7 @@ public class CenterPicture : BaseEntityEmpty
     /// این مقدار برای دسته‌بندی تصاویر استفاده می‌شود و می‌تواند در فیلتر یا نمایش هدفمند کاربرد داشته باشد.
     /// </summary>
     public string PictureType { get; set; } = string.Empty;
+
+    public virtual ICollection<CenterPictureSelected> CenterPictureSelected { get; set; } = [];
+
 }

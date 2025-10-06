@@ -1,4 +1,6 @@
 ﻿using DrMeet.Domain.Base;
+using DrMeet.Domain.Centers;
+using DrMeet.Domain.Doctors;
 using DrMeet.Domain.Users;
 
 /// <summary>
@@ -137,6 +139,12 @@ public class Doctor : BaseEntityPerson
 
     #region ارتباطات
     public virtual User User { get; set; }
+    public virtual ICollection<CenterDoctorsSelected> CenterDoctors{ get; set; }
+    public virtual ICollection<DoctorComment> DoctorComments { get; set; }
     #endregion
+
+}
+public class DoctorReservationTimes
+{
 
 }

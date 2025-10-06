@@ -36,7 +36,7 @@ public class CenterPictureSelectedConfiguration : IEntityTypeConfiguration<Cente
 
         // رابطه با تصویر انتخاب‌شده
         builder.HasOne(s => s.CenterPicture)
-            .WithMany()
+            .WithMany(c => c.CenterPictureSelected)
             .HasForeignKey(s => s.CenterPictureId)
             .OnDelete(DeleteBehavior.SetNull);
 

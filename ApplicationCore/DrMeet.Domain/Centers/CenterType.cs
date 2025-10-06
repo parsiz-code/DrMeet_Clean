@@ -12,7 +12,7 @@ public class CenterType : BaseEntityIdentity
     /// عنوان نوع مرکز درمانی (مثلاً "کلینیک تخصصی"، "بیمارستان عمومی").
     /// این مقدار برای نمایش و فیلتر مراکز استفاده می‌شود.
     /// </summary>
-    public string Name { get; set; }
+    public required string Name { get; set; }
 
     /// <summary>
     /// ترتیب نمایش نوع مرکز در لیست‌ها یا رابط کاربری.

@@ -1,4 +1,5 @@
 ﻿using DrMeet.Domain.Base;
+using DrMeet.Domain.Enums;
 using DrMeet.Domain.Users;
 
 namespace DrMeet.Domain.Centers;
@@ -23,6 +24,7 @@ public class Center: BaseEntityIdentity
     /// برای دسته‌بندی جغرافیایی مراکز استفاده می‌شود.
     /// </summary>
     public int? CityId { get; set; }
+    public CenterOfType? CenterOfType { get; set; }
 
     /// <summary>
     /// شناسه استان محل فعالیت مرکز (اختیاری).
@@ -112,9 +114,10 @@ public class Center: BaseEntityIdentity
     public virtual ICollection<CenterQuestionAnswer> CenterQuestionAnswer { get; set; } = [];
     public virtual ICollection<CenterInsurances> CenterInsurances { get; set; } = [];
     public virtual ICollection<CenterComment> CenterComment { get; set; } = [];
+    public virtual ICollection<CenterDoctorsSelected> CenterDoctors { get; set; }
 
 
-    public virtual CenterType? CenterType { get; set; } = new();
+    public virtual CenterType? CenterType { get; set; } 
 
     ////خدمات قابل ارائه
     //public List<CenterService>? ServicesAvailableId { get; set; } = new();

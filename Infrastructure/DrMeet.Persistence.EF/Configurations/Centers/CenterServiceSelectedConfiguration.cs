@@ -36,7 +36,7 @@ public class CenterServiceSelectedConfiguration : IEntityTypeConfiguration<Cente
 
         // رابطه با سرویس مرجع (ProviderServices)
         builder.HasOne(s => s.ProviderServices)
-            .WithMany()
+            .WithMany(c => c.CenterServices)
             .HasForeignKey(s => s.ServiceId)
             .OnDelete(DeleteBehavior.Restrict); // در صورت حذف سرویس مرجع، ارتباط قطع می‌شود
 

@@ -24,4 +24,5 @@ public class CenterDepartment : BaseEntityIdentity
     /// رابطه چند‌به‌یک با موجودیت <see cref="Center"/>.
     /// </summary>
     public Center? Center { get; set; }
+    public ICollection<CenterDoctorsDepartmantSelected>? CenterDoctorsDepartmantSelected { get; set; }
 }

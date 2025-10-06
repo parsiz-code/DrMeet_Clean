@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DrMeet.Domain.Users;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using DrMeet.Domain.Users;
 
 namespace DrMeet.Infrastructure.Persistence.Configurations.Users;
 
