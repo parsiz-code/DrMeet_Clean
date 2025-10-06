@@ -139,12 +139,11 @@ public class Doctor : BaseEntityPerson
 
     #region ارتباطات
     public virtual User User { get; set; }
-    public virtual ICollection<CenterDoctorsSelected> CenterDoctors{ get; set; }
+    public virtual ICollection<CenterDoctorsSelected> CenterDoctors { get; set; }
     public virtual ICollection<DoctorComment> DoctorComments { get; set; }
-    #endregion
+    public virtual ICollection<CenterDoctorServicePricing> CenterDoctorPricing { get; set; } = [];
+    public virtual ICollection<CenterDoctorServiceOnlineConsultation> CenterDoctorServiceOnlineConsultations { get; set; } = [];
 
-}
-public class DoctorReservationTimes
-{
+    #endregion
 
 }

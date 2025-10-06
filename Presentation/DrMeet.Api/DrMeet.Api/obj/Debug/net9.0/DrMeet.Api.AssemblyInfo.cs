@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DrMeet.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f055d80039c1af09a3d8af7838a1211fb671f10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0eee6fc2d38e0f7d51bc2daea1e4f46816409594")]
 [assembly: System.Reflection.AssemblyProductAttribute("DrMeet.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DrMeet.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

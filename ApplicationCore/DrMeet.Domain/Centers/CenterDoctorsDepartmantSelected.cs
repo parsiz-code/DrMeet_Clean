@@ -1,4 +1,5 @@
 ﻿using DrMeet.Domain.Base;
+using DrMeet.Domain.Doctors;
 
 namespace DrMeet.Domain.Centers;
 
@@ -31,4 +32,6 @@ public class CenterDoctorsDepartmantSelected : BaseEntityIdentity
     /// رابطه چند‌به‌یک با موجودیت <see cref="CenterDepartment"/>.
     /// </summary>
     public CenterDepartment? CenterDepartment { get; set; }
+
+    public virtual ICollection<DoctorShift> DoctorShift { get; set; } = [];
 }

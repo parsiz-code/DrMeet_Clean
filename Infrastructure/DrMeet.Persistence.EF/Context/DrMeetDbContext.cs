@@ -1,6 +1,7 @@
 ﻿using DrMeet.Domain.ApplicationSettings;
 using DrMeet.Domain.Blogs;
 using DrMeet.Domain.Centers;
+using DrMeet.Domain.Doctors;
 using DrMeet.Domain.Iran;
 using DrMeet.Domain.Others;
 using DrMeet.Domain.Patient;
@@ -27,20 +28,32 @@ public class DrMeetDbContext : ApplicationDbContext
     #region Entity  
     public DbSet<ApplicationSetting> ApplicationSetting { get; set; }
     public DbSet<ApplicationSettingFileUpload> ApplicationSettingFileUpload { get; set; }
+    public DbSet<Blog> Blog { get; set; }
+    public DbSet<BlogComment> BlogComment { get; set; }
     public DbSet<User> Users { get; set; }
-    public DbSet<Doctor> Doctors { get; set; }
-    public DbSet<Patient> Patients { get; set; }
+
     public DbSet<Center> Centers { get; set; }
+    public DbSet<CenterDoctorsSelected> CenterDoctorsSelected { get; set; }
+    public DbSet<CenterDoctorsServiceSelected> CenterDoctorsServiceSelected { get; set; }
+    public DbSet<CenterDepartment> CenterDepartment { get; set; }
+    public DbSet<CenterDoctorsDepartmantSelected> CenterDoctorsDepartmantSelected { get; set; }
+    public DbSet<CenterDoctorServiceOnlineConsultation> CenterDoctorServiceOnlineConsultation { get; set; }
+    public DbSet<CenterDoctorServicePricing> CenterDoctorServicePricing { get; set; }
     public DbSet<CenterSocialMediaAccount> CenterSocialMediaAccount { get; set; }
     public DbSet<CenterQuestionAnswerCommentPoints> CenterQuestionAnswerCommentPoints { get; set; }
-    public DbSet<CenterDepartment> CenterDepartment { get; set; }
     public DbSet<CenterInsurances> CenterInsurances { get; set; }
     public DbSet<CenterQuestionAnswer> CenterQuestionAnswer { get; set; }
     public DbSet<CenterType> CenterType { get; set; }
     public DbSet<CenterUserSelected> CenterUsers { get; set; }
     public DbSet<Patient> Patient { get; set; }
-    public DbSet<Blog> Blog { get; set; }
-    public DbSet<BlogComment> BlogComment { get; set; }
+
+    public DbSet<Doctor> Doctors { get; set; }
+    public DbSet<DoctorReserveTime> DoctorReserveTime { get; set; }
+    public DbSet<DoctorComment> DoctorComment { get; set; }
+    public DbSet<DoctorShift> DoctorShift { get; set; }
+    public DbSet<DoctorShiftService> DoctorShiftService { get; set; }
+    public DbSet<DoctorShiftTimeItem> DoctorShiftTimeItem { get; set; }
+
     public DbSet<IranCity> IranCity { get; set; }
     public DbSet<IranProvince> IranProvince { get; set; }
     public DbSet<Expertise> Expertise { get; set; }

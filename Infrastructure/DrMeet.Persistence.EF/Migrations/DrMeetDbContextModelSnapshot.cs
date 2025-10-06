@@ -549,6 +549,108 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.ToTable("CenterDepartments", (string)null);
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterDoctorServiceOnlineConsultation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CenterId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("DoctorId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("PercentagePayment")
+                        .HasColumnType("float");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ServicesAvailableId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorId");
+
+                    b.HasIndex("ServicesAvailableId");
+
+                    b.HasIndex("CenterId", "DoctorId", "ServicesAvailableId")
+                        .IsUnique();
+
+                    b.ToTable("CenterDoctorServiceOnlineConsultations", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterDoctorServicePricing", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CenterId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("DoctorId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("PercentagePayment")
+                        .HasColumnType("float");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProviderServicesId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CenterId");
+
+                    b.HasIndex("ProviderServicesId");
+
+                    b.HasIndex("DoctorId", "CenterId", "ProviderServicesId")
+                        .IsUnique();
+
+                    b.ToTable("CenterDoctorServicePricing", (string)null);
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterDoctorsDepartmantSelected", b =>
                 {
                     b.Property<int>("Id")
@@ -1033,6 +1135,197 @@ namespace DrMeet.Persistence.EF.Migrations
                         .HasFilter("[UserId] IS NOT NULL");
 
                     b.ToTable("DoctorComments", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Doctors.DoctorReserveTime", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CenterDoctorsServiceId")
+                        .HasMaxLength(50)
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int?>("DoctorTimeId")
+                        .HasMaxLength(50)
+                        .HasColumnType("int");
+
+                    b.Property<int>("PatientId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShiftStatus")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CenterDoctorsServiceId");
+
+                    b.HasIndex("DoctorTimeId");
+
+                    b.HasIndex("PatientId", "Date", "CenterDoctorsServiceId")
+                        .IsUnique();
+
+                    b.ToTable("DoctorReserveTimes", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Doctors.DoctorShift", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ActivityStatus")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CenterDoctorsDepartmantId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<int>("DayOfWeek")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("EndTime")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<int>("MeetTime")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShiftType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StartTime")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CenterDoctorsDepartmantId", "DayOfWeek", "StartTime", "EndTime")
+                        .IsUnique()
+                        .HasFilter("[CenterDoctorsDepartmantId] IS NOT NULL");
+
+                    b.ToTable("DoctorShifts", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Doctors.DoctorShiftService", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CenterDoctorsServiceId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("DoctorShiftId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CenterDoctorsServiceId");
+
+                    b.HasIndex("DoctorShiftId", "CenterDoctorsServiceId")
+                        .IsUnique();
+
+                    b.ToTable("DoctorShiftServices", (string)null);
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Doctors.DoctorShiftTimeItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DoctorShiftId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EndTime")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<bool>("IsShiftAvailable")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("StartTime")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorShiftId", "StartTime", "EndTime")
+                        .IsUnique();
+
+                    b.ToTable("DoctorShiftTimeItems", (string)null);
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Iran.IranCity", b =>
@@ -1544,6 +1837,60 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.Navigation("Center");
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterDoctorServiceOnlineConsultation", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Centers.Center", "Center")
+                        .WithMany("CenterDoctorServiceOnlineConsultations")
+                        .HasForeignKey("CenterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Doctor", "Doctor")
+                        .WithMany("CenterDoctorServiceOnlineConsultations")
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DrMeet.Domain.Others.ProviderServices", "ProviderServices")
+                        .WithMany("CenterDoctorServiceOnlineConsultations")
+                        .HasForeignKey("ServicesAvailableId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Center");
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("ProviderServices");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterDoctorServicePricing", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Centers.Center", "Center")
+                        .WithMany("CenterDoctorPricing")
+                        .HasForeignKey("CenterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Doctor", "Doctor")
+                        .WithMany("CenterDoctorPricing")
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DrMeet.Domain.Others.ProviderServices", "ProviderServices")
+                        .WithMany("CenterDoctorPricing")
+                        .HasForeignKey("ProviderServicesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Center");
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("ProviderServices");
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterDoctorsDepartmantSelected", b =>
                 {
                     b.HasOne("DrMeet.Domain.Centers.CenterDepartment", "CenterDepartment")
@@ -1723,6 +2070,72 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Doctors.DoctorReserveTime", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Centers.CenterDoctorsServiceSelected", "CenterDoctorsServiceSelected")
+                        .WithMany("DoctorReserveTimes")
+                        .HasForeignKey("CenterDoctorsServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DrMeet.Domain.Doctors.DoctorShiftTimeItem", "DoctorShiftTimeItem")
+                        .WithMany("DoctorReserveTimes")
+                        .HasForeignKey("DoctorTimeId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("DrMeet.Domain.Patient.Patient", "Patient")
+                        .WithMany("DoctorReserveTimes")
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CenterDoctorsServiceSelected");
+
+                    b.Navigation("DoctorShiftTimeItem");
+
+                    b.Navigation("Patient");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Doctors.DoctorShift", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Centers.CenterDoctorsDepartmantSelected", "CenterDoctorsDepartmant")
+                        .WithMany("DoctorShift")
+                        .HasForeignKey("CenterDoctorsDepartmantId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("CenterDoctorsDepartmant");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Doctors.DoctorShiftService", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Centers.CenterDoctorsServiceSelected", "CenterDoctorsServiceSelected")
+                        .WithMany("DoctorShiftServices")
+                        .HasForeignKey("CenterDoctorsServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DrMeet.Domain.Doctors.DoctorShift", "DoctorShift")
+                        .WithMany("DoctorShiftServices")
+                        .HasForeignKey("DoctorShiftId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CenterDoctorsServiceSelected");
+
+                    b.Navigation("DoctorShift");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Doctors.DoctorShiftTimeItem", b =>
+                {
+                    b.HasOne("DrMeet.Domain.Doctors.DoctorShift", "DoctorShift")
+                        .WithMany("DoctorShiftTimeItems")
+                        .HasForeignKey("DoctorShiftId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("DoctorShift");
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Iran.IranCity", b =>
                 {
                     b.HasOne("DrMeet.Domain.Iran.IranProvince", "Province")
@@ -1758,6 +2171,10 @@ namespace DrMeet.Persistence.EF.Migrations
 
             modelBuilder.Entity("Doctor", b =>
                 {
+                    b.Navigation("CenterDoctorPricing");
+
+                    b.Navigation("CenterDoctorServiceOnlineConsultations");
+
                     b.Navigation("CenterDoctors");
 
                     b.Navigation("DoctorComments");
@@ -1779,6 +2196,10 @@ namespace DrMeet.Persistence.EF.Migrations
 
                     b.Navigation("CenterDepartment");
 
+                    b.Navigation("CenterDoctorPricing");
+
+                    b.Navigation("CenterDoctorServiceOnlineConsultations");
+
                     b.Navigation("CenterDoctors");
 
                     b.Navigation("CenterInsurances");
@@ -1799,11 +2220,23 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.Navigation("CenterDoctorsDepartmantSelected");
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterDoctorsDepartmantSelected", b =>
+                {
+                    b.Navigation("DoctorShift");
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterDoctorsSelected", b =>
                 {
                     b.Navigation("CenterDoctorsDepartmant");
 
                     b.Navigation("CenterDoctorsService");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Centers.CenterDoctorsServiceSelected", b =>
+                {
+                    b.Navigation("DoctorReserveTimes");
+
+                    b.Navigation("DoctorShiftServices");
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Centers.CenterPicture", b =>
@@ -1823,6 +2256,18 @@ namespace DrMeet.Persistence.EF.Migrations
                     b.Navigation("Center");
                 });
 
+            modelBuilder.Entity("DrMeet.Domain.Doctors.DoctorShift", b =>
+                {
+                    b.Navigation("DoctorShiftServices");
+
+                    b.Navigation("DoctorShiftTimeItems");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Doctors.DoctorShiftTimeItem", b =>
+                {
+                    b.Navigation("DoctorReserveTimes");
+                });
+
             modelBuilder.Entity("DrMeet.Domain.Iran.IranProvince", b =>
                 {
                     b.Navigation("Cities");
@@ -1835,9 +2280,18 @@ namespace DrMeet.Persistence.EF.Migrations
 
             modelBuilder.Entity("DrMeet.Domain.Others.ProviderServices", b =>
                 {
+                    b.Navigation("CenterDoctorPricing");
+
+                    b.Navigation("CenterDoctorServiceOnlineConsultations");
+
                     b.Navigation("CenterDoctorsService");
 
                     b.Navigation("CenterServices");
+                });
+
+            modelBuilder.Entity("DrMeet.Domain.Patient.Patient", b =>
+                {
+                    b.Navigation("DoctorReserveTimes");
                 });
 
             modelBuilder.Entity("DrMeet.Domain.Users.User", b =>

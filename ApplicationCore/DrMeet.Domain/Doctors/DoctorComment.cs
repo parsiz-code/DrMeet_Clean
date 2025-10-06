@@ -45,3 +45,4 @@ public class DoctorComment : Comment
     /// </summary>
     public Doctor? Doctor { get; set; }
 }
+

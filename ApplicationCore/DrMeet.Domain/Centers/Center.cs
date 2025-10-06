@@ -107,6 +107,7 @@ public class Center: BaseEntityIdentity
     /// این مجموعه می‌تواند شامل پزشکان، پرسنل یا مدیران باشد.
     /// </summary>
     public virtual ICollection<CenterPictureSelected> CenterPictureSelected { get; set; } = [];
+    public virtual ICollection<CenterDoctorServicePricing> CenterDoctorPricing { get; set; } = [];
     public virtual ICollection<CenterServiceSelected> CenterServices { get; set; } = [];
     public virtual ICollection<CenterDepartment> CenterDepartment { get; set; } = [];
     public virtual ICollection<CenterUserSelected> CenterUser { get; set; } = [];
@@ -116,6 +117,7 @@ public class Center: BaseEntityIdentity
     public virtual ICollection<CenterComment> CenterComment { get; set; } = [];
     public virtual ICollection<CenterDoctorsSelected> CenterDoctors { get; set; }
 
+    public virtual ICollection<CenterDoctorServiceOnlineConsultation> CenterDoctorServiceOnlineConsultations { get; set; } = [];
 
     public virtual CenterType? CenterType { get; set; } 
 

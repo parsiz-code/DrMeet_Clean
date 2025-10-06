@@ -1,4 +1,5 @@
 ﻿using DrMeet.Domain.Base;
+using DrMeet.Domain.Doctors;
 using DrMeet.Domain.Others;
 
 namespace DrMeet.Domain.Centers;
@@ -32,4 +33,8 @@ public class CenterDoctorsServiceSelected : BaseEntityIdentity
     /// رابطه چند‌به‌یک با موجودیت <see cref="ProviderServices"/>.
     /// </summary>
     public ProviderServices? ProviderService { get; set; }
+
+    public ICollection<DoctorShiftService>? DoctorShiftServices { get; set; }
+    public ICollection<DoctorReserveTime>? DoctorReserveTimes { get; set; }
+
 }

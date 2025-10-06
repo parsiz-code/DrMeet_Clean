@@ -27,6 +27,8 @@ public class ProviderServices:BaseEntityIdentity
 
     public virtual ICollection<CenterServiceSelected> CenterServices { get; set; } = [];
     public virtual ICollection<CenterDoctorsServiceSelected> CenterDoctorsService { get; set; } = [];
+    public virtual ICollection<CenterDoctorServicePricing> CenterDoctorPricing { get; set; } = [];
+    public virtual ICollection<CenterDoctorServiceOnlineConsultation> CenterDoctorServiceOnlineConsultations { get; set; } = [];
 
 
 }

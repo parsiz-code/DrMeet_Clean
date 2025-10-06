@@ -1,4 +1,5 @@
 ﻿using DrMeet.Domain.Base;
+using DrMeet.Domain.Doctors;
 using DrMeet.Domain.Users;
 
 namespace DrMeet.Domain.Patient;
@@ -50,4 +51,6 @@ public class Patient : BaseEntityPerson
     /// برای ثبت اطلاعات بیمه‌ی تکمیلی در صورت وجود استفاده می‌شود.
     /// </summary>
     public int? SupplementInsuranceId { get; set; }
+
+    public ICollection<DoctorReserveTime>? DoctorReserveTimes { get; set; }
 }
