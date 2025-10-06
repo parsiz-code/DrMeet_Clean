@@ -14,7 +14,7 @@ public class ApplicationSettingFileUploadConfiguration : IEntityTypeConfiguratio
     public void Configure(EntityTypeBuilder<ApplicationSettingFileUpload> builder)
     {
         // تعیین نام جدول
-        builder.ToTable("FileUploadSettings");
+        builder.ToTable("ApplicationSettingFileUpload");
 
         // کلید اصلی
         builder.HasKey(f => f.Id);

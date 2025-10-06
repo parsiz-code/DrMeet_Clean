@@ -1,4 +1,5 @@
 ﻿using DrMeet.Domain.Base;
+using DrMeet.Domain.Centers;
 
 namespace DrMeet.Domain.Others;
 
@@ -30,4 +31,6 @@ public class Insurance : BaseEntityIdentity
     /// اگر مقدار true باشد، بیمه پایه است؛ در غیر این صورت بیمه تکمیلی محسوب می‌شود.
     /// </summary>
     public bool IsBaseInsurance { get; set; }
+    public virtual ICollection<CenterInsurances> CenterInsurances { get; set; } = [];
+
 }

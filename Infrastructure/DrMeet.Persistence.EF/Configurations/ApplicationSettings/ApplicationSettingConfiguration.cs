@@ -16,7 +16,7 @@ public class ApplicationSettingConfiguration : IEntityTypeConfiguration<Applicat
     public void Configure(EntityTypeBuilder<ApplicationSetting> builder)
     {
         // تعیین نام جدول
-        builder.ToTable("ApplicationSettings");
+        builder.ToTable("ApplicationSetting");
 
         // کلید اصلی
         builder.HasKey(a => a.Id);

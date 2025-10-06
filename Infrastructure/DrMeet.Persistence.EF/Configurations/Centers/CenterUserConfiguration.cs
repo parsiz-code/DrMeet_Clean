@@ -11,14 +11,14 @@ namespace DrMeet.Persistence.EF.Configurations.Centers;
 /// <summary>
 /// پیکربندی Fluent API برای مدل CenterUser.
 /// </summary>
-public class CenterUserConfiguration : IEntityTypeConfiguration<CenterUser>
+public class CenterUserSelectedConfiguration : IEntityTypeConfiguration<CenterUserSelected>
 {
-    public void Configure(EntityTypeBuilder<CenterUser> builder)
+    public void Configure(EntityTypeBuilder<CenterUserSelected> builder)
     {
         // کلید اصلی از کلاس پایه
         builder.HasKey(e => e.Id);
         // تعیین نام جدول
-        builder.ToTable("CenterUsers");
+        builder.ToTable("CenterUsersSelected");
 
         // تعیین کلید اصلی ترکیبی از UserId و CenterId
         builder.HasKey(cu => new { cu.UserId, cu.CenterId });

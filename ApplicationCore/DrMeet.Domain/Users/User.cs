@@ -75,9 +75,10 @@ public  class User : BaseEntityIdentity
     public virtual Doctor Doctor { get; set; }
     public virtual Patient Patient { get; set; }
     public virtual ICollection<Slider> Sliders { get; set; }
-    public virtual ICollection<CenterUser> CenterUser { get; set; }
+    public virtual ICollection<CenterUserSelected> CenterUser { get; set; }
     public virtual ICollection<Blog> Blogs { get; set; }
     public virtual ICollection<BlogComment> BlogComments { get; set; }
+    public virtual ICollection<CenterComment> CenterComments { get; set; } = [];
     #endregion
 
 }

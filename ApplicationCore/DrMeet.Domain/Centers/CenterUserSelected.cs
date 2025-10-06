@@ -8,7 +8,7 @@ namespace DrMeet.Domain.Centers;
 /// مدل واسط برای ارتباط بین کاربران و مراکز درمانی.
 /// این کلاس نمایانگر رابطه‌ی چند-به-چند بین موجودیت‌های User و Center است.
 /// </summary>
-public class CenterUser : BaseEntityEmpty
+public class CenterUserSelected : BaseEntityEmpty
 {
     /// <summary>
     /// شناسه‌ی کاربر مرتبط با مرکز درمانی.

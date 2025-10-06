@@ -104,11 +104,14 @@ public class Center: BaseEntityIdentity
     /// لیست کاربران مرتبط با مرکز.
     /// این مجموعه می‌تواند شامل پزشکان، پرسنل یا مدیران باشد.
     /// </summary>
+    public virtual ICollection<CenterPictureSelected> CenterPictureSelected { get; set; } = [];
+    public virtual ICollection<CenterServiceSelected> CenterServices { get; set; } = [];
     public virtual ICollection<CenterDepartment> CenterDepartment { get; set; } = [];
-    public virtual ICollection<CenterUser> CenterUser { get; set; } = [];
+    public virtual ICollection<CenterUserSelected> CenterUser { get; set; } = [];
     public virtual ICollection<CenterSocialMediaAccount> SocialMediaAccount { get; set; } = [];
     public virtual ICollection<CenterQuestionAnswer> CenterQuestionAnswer { get; set; } = [];
     public virtual ICollection<CenterInsurances> CenterInsurances { get; set; } = [];
+    public virtual ICollection<CenterComment> CenterComment { get; set; } = [];
 
 
     public virtual CenterType? CenterType { get; set; } = new();

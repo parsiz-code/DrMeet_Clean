@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DrMeet.Persistence.EF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d79af0481f6d2f839c1ab33ac62aab95d7cfcbe9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b29e2f3fa258439bbaf9eff25a2417ea476b4cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("DrMeet.Persistence.EF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DrMeet.Persistence.EF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

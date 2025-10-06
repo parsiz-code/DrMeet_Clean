@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251005121436_CenterInsurances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251005121436_CenterInsurances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006060637_rename-ApplicationSetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006060637_rename-ApplicationSetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\applicationcore\\drmeet.domain\\centers\\centerdepartment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|solutionrelative:applicationcore\\drmeet.domain\\centers\\centerdepartment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\infrastructure\\drmeet.persistence.ef\\configurations\\applicationsettings\\applicationsettingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|solutionrelative:infrastructure\\drmeet.persistence.ef\\configurations\\applicationsettings\\applicationsettingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\infrastructure\\drmeet.persistence.ef\\configurations\\centers\\centeruserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|solutionrelative:infrastructure\\drmeet.persistence.ef\\configurations\\centers\\centeruserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\infrastructure\\drmeet.persistence.ef\\configurations\\applicationsettings\\applicationsettingfileuploadconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|solutionrelative:infrastructure\\drmeet.persistence.ef\\configurations\\applicationsettings\\applicationsettingfileuploadconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,40 +35,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20251005121436_CenterInsurances.cs",
-              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251005121436_CenterInsurances.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251005121436_CenterInsurances.cs",
-              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251005121436_CenterInsurances.cs",
-              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251005121436_CenterInsurances.cs",
+              "Title": "20251006060637_rename-ApplicationSetting.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006060637_rename-ApplicationSetting.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006060637_rename-ApplicationSetting.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006060637_rename-ApplicationSetting.cs",
+              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006060637_rename-ApplicationSetting.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T12:14:36.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CenterUserConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Centers\\CenterUserConfiguration.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Centers\\CenterUserConfiguration.cs",
-              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Centers\\CenterUserConfiguration.cs",
-              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Centers\\CenterUserConfiguration.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAcwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T12:13:45.745Z",
+              "WhenOpened": "2025-10-06T06:06:37.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CenterDepartment.cs",
-              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterDepartment.cs",
-              "RelativeDocumentMoniker": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterDepartment.cs",
-              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterDepartment.cs",
-              "RelativeToolTip": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterDepartment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "Title": "ApplicationSettingConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\ApplicationSettings\\ApplicationSettingConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\ApplicationSettings\\ApplicationSettingConfiguration.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\ApplicationSettings\\ApplicationSettingConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\ApplicationSettings\\ApplicationSettingConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T12:11:45.178Z",
+              "WhenOpened": "2025-10-06T06:06:04.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationSettingFileUploadConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\ApplicationSettings\\ApplicationSettingFileUploadConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\ApplicationSettings\\ApplicationSettingFileUploadConfiguration.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\ApplicationSettings\\ApplicationSettingFileUploadConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\ApplicationSettings\\ApplicationSettingFileUploadConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T06:06:03.376Z",
               "EditorCaption": ""
             }
           ]
