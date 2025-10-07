@@ -1,4 +1,5 @@
 ﻿using DrMeet.Domain.Enums;
+using DrMeet.Domain.Iran;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,13 +39,30 @@ public class BaseEntity
     /// </summary>
     public bool Status { get; set; } = true;
 }
-public class BaseEntityPerson: BaseEntityIdentity
+public class BaseEntityPerson: BaseEntityLocation
 {
     public GenderModel? Gender { get; set; }
     public string? FatherName { get; set; } = string.Empty;
     public string? BirthDate { get; set; }
     public string? NationalCode { get; set; } = string.Empty;
-    public string? ProvinceId { get; set; } = string.Empty;
-    public string? CityId { get; set; } = string.Empty;
+
+}
+public class BaseEntityLocation : BaseEntityIdentity
+{    /// <summary>
+     /// شناسه استان محل فعالیت مرکز (اختیاری).
+     /// </summary>
+    public int? ProvinceId { get; set; }
+    public IranProvince? IranProvince { get; set; }
+    /// <summary>
+    /// شناسه شهر محل فعالیت مرکز (اختیاری).
+    /// برای دسته‌بندی جغرافیایی مراکز استفاده می‌شود.
+    /// </summary>
+    public int? CityId { get; set; }
+    public IranCity? IranCity { get; set; }
+
+    /// <summary>
+    /// منطقه یا ناحیه جغرافیایی مرکز (اختیاری).
+    /// می‌تواند برای فیلترهای منطقه‌ای استفاده شود.
+    /// </summary>
     public string? Region { get; set; } = string.Empty;
 }

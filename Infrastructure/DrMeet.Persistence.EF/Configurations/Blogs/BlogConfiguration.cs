@@ -1,5 +1,4 @@
 ﻿using DrMeet.Domain.Blogs;
-using DrMeet.Domain.Patient;
 using DrMeet.Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

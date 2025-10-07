@@ -1,5 +1,4 @@
-﻿using DrMeet.Domain.Doctors;
-using DrMeet.Domain.Users;
+﻿using DrMeet.Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -56,8 +55,6 @@ public class DoctorConfiguration : IEntityTypeConfiguration<Doctor>
         builder.Property(d => d.Description)
             .HasMaxLength(2000); // توضیحات تکمیلی
 
-        builder.Property(d => d.Over15YearsOfExperience)
-            .HasDefaultValue(false); // سابقه بیش از ۱۵ سال (nullable)
 
         builder.Property(d => d.NumberMedicalSystem)
             .HasMaxLength(50); // شماره نظام پزشکی
@@ -101,50 +98,15 @@ public class DoctorConfiguration : IEntityTypeConfiguration<Doctor>
             .HasColumnType("decimal(18,2)")
             .HasDefaultValue(0); // هزینه مشاوره متنی
 
-        // ویژگی CenterId به صورت لیست رشته‌ای است و در دیتابیس ذخیره نمی‌شود
-        // مگر اینکه با ValueConverter یا جدول رابطه‌ای جداگانه مدیریت شود
-        builder.Ignore(d => d.CenterId);
+        builder.HasOne(d => d.IranProvince)
+            .WithMany(p => p.Doctors)
+            .HasForeignKey(d => d.ProvinceId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(d => d.IranCity)
+            .WithMany(p => p.Doctors)
+            .HasForeignKey(d => d.CityId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 
-}
-
-
-/// <summary>
-/// پیکربندی Fluent API برای موجودیت <see cref="DoctorShiftService"/>.
-/// این کلاس تنظیمات نگاشت جدول مربوط به خدمات فعال در شیفت‌های پزشک را مشخص می‌کند.
-/// </summary>
-public class DoctorShiftServiceConfiguration : IEntityTypeConfiguration<DoctorShiftService>
-{
-    public void Configure(EntityTypeBuilder<DoctorShiftService> builder)
-    {
-        // تعیین نام جدول در دیتابیس
-        builder.ToTable("DoctorShiftServices");
-
-        // کلید اصلی جدول
-        builder.HasKey(s => s.Id);
-
-        // شناسه شیفت پزشک: الزامی
-        builder.Property(s => s.DoctorShiftId)
-            .IsRequired();
-
-        // شناسه خدمت انتخاب‌شده توسط پزشک در مرکز: الزامی
-        builder.Property(s => s.CenterDoctorsServiceId)
-            .IsRequired();
-
-        // رابطه با شیفت پزشک
-        builder.HasOne(s => s.DoctorShift)
-            .WithMany(shift => shift.DoctorShiftServices)
-            .HasForeignKey(s => s.DoctorShiftId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-        // رابطه با خدمت انتخاب‌شده توسط پزشک
-        builder.HasOne(s => s.CenterDoctorsServiceSelected)
-            .WithMany(service => service.DoctorShiftServices)
-            .HasForeignKey(s => s.CenterDoctorsServiceId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-        // ایندکس ترکیبی برای جلوگیری از ثبت خدمت تکراری در یک شیفت خاص
-        builder.HasIndex(s => new { s.DoctorShiftId, s.CenterDoctorsServiceId })
-            .IsUnique();
-    }
 }

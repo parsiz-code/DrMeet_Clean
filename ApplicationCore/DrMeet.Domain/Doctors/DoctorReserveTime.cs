@@ -1,6 +1,7 @@
 ﻿using DrMeet.Domain.Base;
 using DrMeet.Domain.Centers;
 using DrMeet.Domain.Enums;
+using DrMeet.Domain.Patients;
 
 namespace DrMeet.Domain.Doctors;
 
@@ -50,7 +51,7 @@ public class DoctorReserveTime : BaseEntityIdentity
     /// شیء بیمار مرتبط با رزرو.
     /// رابطه چند‌به‌یک با موجودیت <see cref="Patient"/>.
     /// </summary>
-    public DrMeet.Domain.Patient.Patient? Patient { get; set; }
+    public Patient? Patient { get; set; }
 
     /// <summary>
     /// شیء خدمت انتخاب‌شده توسط پزشک در مرکز درمانی.

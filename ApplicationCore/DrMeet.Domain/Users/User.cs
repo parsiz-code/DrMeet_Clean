@@ -6,7 +6,7 @@ using DrMeet.Domain.Base;
 using DrMeet.Domain.Blogs;
 using DrMeet.Domain.Centers;
 using DrMeet.Domain.Others;
-using DrMeet.Domain.Patient;
+using DrMeet.Domain.Patients;
 using ErrorOr;
 
 

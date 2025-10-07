@@ -1,4 +1,4 @@
-﻿using DrMeet.Domain.Patient;
+﻿using DrMeet.Domain.Patients;
 using DrMeet.Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -30,9 +30,9 @@ public class PatientConfiguration : IEntityTypeConfiguration<Patient>
         builder.Property(p => p.PatientRemoteId)
             .IsRequired(false);
 
-        // شناسه مرکز درمانی که بیمار در آن ثبت شده است (اختیاری)
-        builder.Property(p => p.CenterId)
-            .IsRequired(false);
+        //// شناسه مرکز درمانی که بیمار در آن ثبت شده است (اختیاری)
+        //builder.Property(p => p.CenterId)
+        //    .IsRequired(false);
 
         // مسیر تصویر پروفایل بیمار، با محدودیت طول ۳۰۰ کاراکتر
         builder.Property(p => p.Picture)
@@ -49,5 +49,27 @@ public class PatientConfiguration : IEntityTypeConfiguration<Patient>
             .HasForeignKey<Patient>(p => p.UserId)
             .OnDelete(DeleteBehavior.Restrict); // یا .Cascade بسته به نیاز
 
+
+        builder.HasOne(p => p.IranProvince)
+            .WithMany(p => p.Patients)
+            .HasForeignKey(p => p.ProvinceId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(p =>p.IranCity)
+            .WithMany(p => p.Patients)
+            .HasForeignKey(p => p.CityId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+
+        builder.HasOne(p => p.Insurance)
+         .WithMany(p => p.Patients)
+         .HasForeignKey(p => p.InsuranceId)
+         .OnDelete(DeleteBehavior.Restrict);
+
+
+        builder.HasOne(p => p.Insurance)
+         .WithMany(p => p.Patients)
+         .HasForeignKey(p => p.InsuranceId)
+         .OnDelete(DeleteBehavior.Restrict);
     }
 }

@@ -59,8 +59,7 @@ public class CenterConfiguration : IEntityTypeConfiguration<Center>
         builder.Property(c => c.Address)
             .HasMaxLength(500); // آدرس فیزیکی
 
-        builder.Property(c => c.LicensesId)
-            .IsRequired(false); // شناسه مجوزها (اختیاری)
+
 
         builder.Property(c => c.Description)
             .HasMaxLength(2000); // توضیحات تکمیلی
@@ -79,5 +78,15 @@ public class CenterConfiguration : IEntityTypeConfiguration<Center>
             .WithOne(cu => cu.Center)
             .HasForeignKey(cu => cu.CenterId)
             .OnDelete(DeleteBehavior.Restrict); // جلوگیری از حذف کاربران هنگام حذف مرکز
+
+        builder.HasOne(c => c.IranProvince)
+            .WithMany(p => p.Centers)
+            .HasForeignKey(c => c.ProvinceId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(c => c.IranCity)
+            .WithMany(p => p.Centers)
+            .HasForeignKey(c => c.CityId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

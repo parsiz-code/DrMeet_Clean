@@ -4,7 +4,7 @@ using DrMeet.Domain.Users;
 
 namespace DrMeet.Domain.Centers;
 
-public class Center: BaseEntityIdentity
+public class Center: BaseEntityLocation
 {
 
     /// <summary>
@@ -19,23 +19,7 @@ public class Center: BaseEntityIdentity
     /// </summary>
     public int CenterTypeId { get; set; }
 
-    /// <summary>
-    /// شناسه شهر محل فعالیت مرکز (اختیاری).
-    /// برای دسته‌بندی جغرافیایی مراکز استفاده می‌شود.
-    /// </summary>
-    public int? CityId { get; set; }
     public CenterOfType? CenterOfType { get; set; }
-
-    /// <summary>
-    /// شناسه استان محل فعالیت مرکز (اختیاری).
-    /// </summary>
-    public int? ProvinceId { get; set; }
-
-    /// <summary>
-    /// منطقه یا ناحیه جغرافیایی مرکز (اختیاری).
-    /// می‌تواند برای فیلترهای منطقه‌ای استفاده شود.
-    /// </summary>
-    public string? Region { get; set; }
 
     /// <summary>
     /// بیوگرافی یا معرفی کوتاه مرکز درمانی (اختیاری).
@@ -68,11 +52,11 @@ public class Center: BaseEntityIdentity
     /// </summary>
     public string? Address { get; set; }
 
-    /// <summary>
-    /// شناسه مجوزهای قانونی مرکز درمانی (اختیاری).
-    /// می‌تواند به جدول مجوزها اشاره داشته باشد.
-    /// </summary>
-    public int? LicensesId { get; set; }
+    ///// <summary>
+    ///// شناسه مجوزهای قانونی مرکز درمانی (اختیاری).
+    ///// می‌تواند به جدول مجوزها اشاره داشته باشد.
+    ///// </summary>
+    //public int? LicensesId { get; set; }
 
     /// <summary>
     /// توضیحات تکمیلی درباره‌ی مرکز درمانی (اختیاری).
@@ -106,7 +90,6 @@ public class Center: BaseEntityIdentity
     /// لیست کاربران مرتبط با مرکز.
     /// این مجموعه می‌تواند شامل پزشکان، پرسنل یا مدیران باشد.
     /// </summary>
-    public virtual ICollection<CenterPictureSelected> CenterPictureSelected { get; set; } = [];
     public virtual ICollection<CenterDoctorServicePricing> CenterDoctorPricing { get; set; } = [];
     public virtual ICollection<CenterServiceSelected> CenterServices { get; set; } = [];
     public virtual ICollection<CenterDepartment> CenterDepartment { get; set; } = [];
@@ -115,11 +98,13 @@ public class Center: BaseEntityIdentity
     public virtual ICollection<CenterQuestionAnswer> CenterQuestionAnswer { get; set; } = [];
     public virtual ICollection<CenterInsurances> CenterInsurances { get; set; } = [];
     public virtual ICollection<CenterComment> CenterComment { get; set; } = [];
-    public virtual ICollection<CenterDoctorsSelected> CenterDoctors { get; set; }
+    public virtual ICollection<CenterPictureSelected>? CenterPictureSelected { get; set; }
+    public virtual ICollection<CenterDoctorsSelected>? CenterDoctors { get; set; }
+    public ICollection<CenterLicensesSelected>? CenterLicensesSelected { get; set; }
 
-    public virtual ICollection<CenterDoctorServiceOnlineConsultation> CenterDoctorServiceOnlineConsultations { get; set; } = [];
 
     public virtual CenterType? CenterType { get; set; } 
+
 
     ////خدمات قابل ارائه
     //public List<CenterService>? ServicesAvailableId { get; set; } = new();

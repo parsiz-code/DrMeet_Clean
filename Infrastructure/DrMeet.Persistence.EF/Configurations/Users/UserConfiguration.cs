@@ -1,5 +1,5 @@
 ﻿using DrMeet.Domain.Base;
-using DrMeet.Domain.Patient;
+using DrMeet.Domain.Patients;
 using DrMeet.Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -60,7 +60,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         entity
             .HasOne(user => user.Doctor)
             .WithOne(doctor => doctor.User)
-            .HasForeignKey<Doctor>(doctor => doctor.Id)
+            .HasForeignKey<Doctor>(doctor => doctor.UserId)
             .OnDelete(DeleteBehavior.Restrict);
 
         entity.

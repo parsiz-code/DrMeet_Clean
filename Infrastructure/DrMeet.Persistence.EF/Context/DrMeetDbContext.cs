@@ -4,7 +4,7 @@ using DrMeet.Domain.Centers;
 using DrMeet.Domain.Doctors;
 using DrMeet.Domain.Iran;
 using DrMeet.Domain.Others;
-using DrMeet.Domain.Patient;
+using DrMeet.Domain.Patients;
 using DrMeet.Domain.Users;
 using Microsoft.EntityFrameworkCore;
 

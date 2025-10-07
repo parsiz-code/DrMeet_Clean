@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006120226_add-all-tables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006120226_add-all-tables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\infrastructure\\drmeet.persistence.ef\\context\\drmeetdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|solutionrelative:infrastructure\\drmeet.persistence.ef\\context\\drmeetdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\applicationcore\\drmeet.domain\\doctors\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|solutionrelative:applicationcore\\drmeet.domain\\doctors\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\applicationcore\\drmeet.domain\\doctors\\doctorreservetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|solutionrelative:applicationcore\\drmeet.domain\\doctors\\doctorreservetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\infrastructure\\drmeet.persistence.ef\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|solutionrelative:infrastructure\\drmeet.persistence.ef\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\infrastructure\\drmeet.persistence.ef\\configurations\\doctors\\doctorshiftconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|solutionrelative:infrastructure\\drmeet.persistence.ef\\configurations\\doctors\\doctorshiftconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\applicationcore\\drmeet.domain\\doctors\\doctorshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|solutionrelative:applicationcore\\drmeet.domain\\doctors\\doctorshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007071744_add-DoctorExpertises-table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007071744_add-DoctorExpertises-table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\infrastructure\\drmeet.persistence.ef\\configurations\\doctors\\doctorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|solutionrelative:infrastructure\\drmeet.persistence.ef\\configurations\\doctors\\doctorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\applicationcore\\drmeet.domain\\others\\expertise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|solutionrelative:applicationcore\\drmeet.domain\\others\\expertise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007062456_remove-centerId-DoctorId-AddCenterDoctorId-CenterDoctorServiceOnlineConsultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007062456_remove-centerId-DoctorId-AddCenterDoctorId-CenterDoctorServiceOnlineConsultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\infrastructure\\drmeet.persistence.ef\\configurations\\centers\\centerdoctorservicepricingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05EE8053-0B49-44FA-9937-F97E675CE6CC}|Infrastructure\\DrMeet.Persistence.EF\\DrMeet.Persistence.EF.csproj|solutionrelative:infrastructure\\drmeet.persistence.ef\\configurations\\centers\\centerdoctorservicepricingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\applicationcore\\drmeet.domain\\centers\\centerdoctorsselected.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|solutionrelative:applicationcore\\drmeet.domain\\centers\\centerdoctorsselected.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\applicationcore\\drmeet.domain\\centers\\centerdoctorserviceonlineconsultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|solutionrelative:applicationcore\\drmeet.domain\\centers\\centerdoctorserviceonlineconsultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\applicationcore\\drmeet.domain\\centers\\centerdoctorsdepartmantselected.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|solutionrelative:applicationcore\\drmeet.domain\\centers\\centerdoctorsdepartmantselected.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\applicationcore\\drmeet.domain\\centers\\centerdoctorsserviceselected.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|solutionrelative:applicationcore\\drmeet.domain\\centers\\centerdoctorsserviceselected.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\applicationcore\\drmeet.domain\\centers\\centerserviceselected.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|solutionrelative:applicationcore\\drmeet.domain\\centers\\centerserviceselected.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|c:\\users\\parsiz\\source\\repos\\drmeet_clean\\applicationcore\\drmeet.domain\\centers\\centerlicensesselected.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2F0457-674D-45BA-9BE3-34A5F7ADBD32}|ApplicationCore\\DrMeet.Domain\\DrMeet.Domain.csproj|solutionrelative:applicationcore\\drmeet.domain\\centers\\centerlicensesselected.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,66 +59,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20251006120226_add-all-tables.cs",
-              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006120226_add-all-tables.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006120226_add-all-tables.cs",
-              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006120226_add-all-tables.cs",
-              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251006120226_add-all-tables.cs",
+              "Title": "20251007071744_add-DoctorExpertises-table.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007071744_add-DoctorExpertises-table.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007071744_add-DoctorExpertises-table.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007071744_add-DoctorExpertises-table.cs",
+              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007071744_add-DoctorExpertises-table.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T12:02:26.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Doctors\\Doctor.cs",
-              "RelativeDocumentMoniker": "ApplicationCore\\DrMeet.Domain\\Doctors\\Doctor.cs",
-              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Doctors\\Doctor.cs",
-              "RelativeToolTip": "ApplicationCore\\DrMeet.Domain\\Doctors\\Doctor.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAawJQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T12:01:11.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Context\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Context\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Context\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Context\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T11:55:24.288Z",
+              "WhenOpened": "2025-10-07T07:17:44.232Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DrMeetDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Context\\DrMeetDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Context\\DrMeetDbContext.cs",
-              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Context\\DrMeetDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Context\\DrMeetDbContext.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAArwDMAAAA7AAAAAAAAAA==",
+              "Title": "DoctorConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorConfiguration.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorConfiguration.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAcwG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T11:55:23.532Z",
+              "WhenOpened": "2025-10-07T07:16:50.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Expertise.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Others\\Expertise.cs",
+              "RelativeDocumentMoniker": "ApplicationCore\\DrMeet.Domain\\Others\\Expertise.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Others\\Expertise.cs",
+              "RelativeToolTip": "ApplicationCore\\DrMeet.Domain\\Others\\Expertise.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvxIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T06:55:40.138Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DoctorReserveTime.cs",
-              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Doctors\\DoctorReserveTime.cs",
-              "RelativeDocumentMoniker": "ApplicationCore\\DrMeet.Domain\\Doctors\\DoctorReserveTime.cs",
-              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Doctors\\DoctorReserveTime.cs",
-              "RelativeToolTip": "ApplicationCore\\DrMeet.Domain\\Doctors\\DoctorReserveTime.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACsAAAAmAAAAAAAAAA==",
+              "Title": "20251007062456_remove-centerId-DoctorId-AddCenterDoctorId-CenterDoctorServiceOnlineConsultation.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007062456_remove-centerId-DoctorId-AddCenterDoctorId-CenterDoctorServiceOnlineConsultation.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007062456_remove-centerId-DoctorId-AddCenterDoctorId-CenterDoctorServiceOnlineConsultation.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007062456_remove-centerId-DoctorId-AddCenterDoctorId-CenterDoctorServiceOnlineConsultation.cs",
+              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Migrations\\20251007062456_remove-centerId-DoctorId-AddCenterDoctorId-CenterDoctorServiceOnlineConsultation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T11:50:48.313Z",
+              "WhenOpened": "2025-10-07T06:24:56.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CenterDoctorServicePricingConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Centers\\CenterDoctorServicePricingConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Centers\\CenterDoctorServicePricingConfiguration.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Centers\\CenterDoctorServicePricingConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Centers\\CenterDoctorServicePricingConfiguration.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAMwGAAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T06:21:41.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CenterDoctorsSelected.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsSelected.cs",
+              "RelativeDocumentMoniker": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsSelected.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsSelected.cs",
+              "RelativeToolTip": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsSelected.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwCQAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T06:16:57.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CenterServiceSelected.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterServiceSelected.cs",
+              "RelativeDocumentMoniker": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterServiceSelected.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterServiceSelected.cs",
+              "RelativeToolTip": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterServiceSelected.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T06:16:42.218Z",
               "EditorCaption": ""
             },
             {
@@ -119,41 +157,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DoctorShift.cs",
-              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Doctors\\DoctorShift.cs",
-              "RelativeDocumentMoniker": "ApplicationCore\\DrMeet.Domain\\Doctors\\DoctorShift.cs",
-              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Doctors\\DoctorShift.cs",
-              "RelativeToolTip": "ApplicationCore\\DrMeet.Domain\\Doctors\\DoctorShift.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAQwE0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "CenterLicensesSelected.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterLicensesSelected.cs",
+              "RelativeDocumentMoniker": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterLicensesSelected.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterLicensesSelected.cs",
+              "RelativeToolTip": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterLicensesSelected.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T11:37:25.562Z",
+              "WhenOpened": "2025-10-07T06:16:35.921Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DoctorShiftConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorShiftConfiguration.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorShiftConfiguration.cs",
-              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorShiftConfiguration.cs",
-              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorShiftConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "CenterDoctorsServiceSelected.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsServiceSelected.cs",
+              "RelativeDocumentMoniker": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsServiceSelected.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsServiceSelected.cs",
+              "RelativeToolTip": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsServiceSelected.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T11:37:22.114Z",
+              "WhenOpened": "2025-10-07T06:16:31.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CenterDoctorServiceOnlineConsultation.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorServiceOnlineConsultation.cs",
+              "RelativeDocumentMoniker": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorServiceOnlineConsultation.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorServiceOnlineConsultation.cs",
+              "RelativeToolTip": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorServiceOnlineConsultation.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T06:16:26.845Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "DoctorConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorConfiguration.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorConfiguration.cs",
-              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorConfiguration.cs",
-              "RelativeToolTip": "Infrastructure\\DrMeet.Persistence.EF\\Configurations\\Doctors\\DoctorConfiguration.cs",
+              "Title": "CenterDoctorsDepartmantSelected.cs",
+              "DocumentMoniker": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsDepartmantSelected.cs",
+              "RelativeDocumentMoniker": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsDepartmantSelected.cs",
+              "ToolTip": "C:\\Users\\Parsiz\\source\\repos\\DrMeet_Clean\\ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsDepartmantSelected.cs",
+              "RelativeToolTip": "ApplicationCore\\DrMeet.Domain\\Centers\\CenterDoctorsDepartmantSelected.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T11:37:21.568Z",
+              "WhenOpened": "2025-10-07T06:16:23.765Z",
               "EditorCaption": ""
             }
           ]

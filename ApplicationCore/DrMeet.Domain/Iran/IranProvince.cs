@@ -1,4 +1,6 @@
 ﻿using DrMeet.Domain.Base;
+using DrMeet.Domain.Centers;
+using DrMeet.Domain.Patients;
 
 namespace DrMeet.Domain.Iran;
 
@@ -19,4 +21,8 @@ public class IranProvince : BaseEntityEmpty
     /// رابطه یک‌به‌چند با موجودیت IranCity.
     /// </summary>
     public List<IranCity> Cities { get; set; } = [];
+
+    public ICollection<Center>? Centers { get; set; }
+    public ICollection<Patient>? Patients { get; set; }
+    public ICollection<Doctor>? Doctors { get; set; }
 }

@@ -33,6 +33,8 @@ public class CenterDoctorsSelected : BaseEntityEmpty
     public Doctor? Doctor { get; set; }
     public ICollection<CenterDoctorsDepartmantSelected>? CenterDoctorsDepartmant{ get; set; }
     public ICollection<CenterDoctorsServiceSelected>? CenterDoctorsService{ get; set; }
+    public ICollection<CenterDoctorServicePricing>? CenterDoctorServicePricing { get; set; }
+    public ICollection<CenterDoctorServiceOnlineConsultation>? CenterDoctorServiceOnlineConsultation { get; set; }
 
 
 }

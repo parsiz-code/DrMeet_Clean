@@ -47,7 +47,7 @@ public class Doctor : BaseEntityPerson
     /// <summary>
     /// شناسه‌ی کاربری مرتبط با پزشک.
     /// </summary>
-    public string UserId { get; set; } = string.Empty;
+    public int UserId { get; set; } 
 
     /// <summary>
     /// بیوگرافی کوتاه پزشک.
@@ -59,10 +59,7 @@ public class Doctor : BaseEntityPerson
     /// </summary>
     public string? Description { get; set; } = string.Empty;
 
-    /// <summary>
-    /// آیا پزشک بیش از ۱۵ سال سابقه دارد؟ (nullable)
-    /// </summary>
-    public bool? Over15YearsOfExperience { get; set; } = false;
+  
 
     /// <summary>
     /// شماره نظام پزشکی پزشک.
@@ -87,14 +84,10 @@ public class Doctor : BaseEntityPerson
     public string? WebSite { get; set; } = string.Empty;
 
     // اگر نیاز شد، می‌تونید آدرس رو هم اضافه کنید.
-    // public string? Address { get; set; } = string.Empty;
+    public string? Address { get; set; } = string.Empty;
 
     #endregion
 
-    /// <summary>
-    /// لیست شناسه‌های مراکزی که پزشک در آن‌ها فعالیت دارد.
-    /// </summary>
-    public List<string>? CenterId { get; set; }
 
     /// <summary>
     /// آیا پزشک ویزیت حضوری انجام می‌دهد؟
@@ -141,8 +134,8 @@ public class Doctor : BaseEntityPerson
     public virtual User User { get; set; }
     public virtual ICollection<CenterDoctorsSelected> CenterDoctors { get; set; }
     public virtual ICollection<DoctorComment> DoctorComments { get; set; }
-    public virtual ICollection<CenterDoctorServicePricing> CenterDoctorPricing { get; set; } = [];
-    public virtual ICollection<CenterDoctorServiceOnlineConsultation> CenterDoctorServiceOnlineConsultations { get; set; } = [];
+    public virtual ICollection<DoctorExpertise> DoctorExpertises { get; set; }
+    
 
     #endregion
 

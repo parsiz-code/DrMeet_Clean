@@ -4,10 +4,10 @@ using DrMeet.Domain.Others;
 namespace DrMeet.Domain.Centers;
 
 /// <summary>
-/// مدل تعرفه خدمات پزشک در یک مرکز درمانی.
-/// این کلاس مشخص می‌کند که پزشک برای ارائه یک خدمت خاص در یک مرکز مشخص، چه مبلغی دریافت می‌کند و چه درصدی از پرداخت به او تعلق می‌گیرد.
+/// مدل تعریف مشاوره آنلاین پزشک برای یک خدمت خاص در یک مرکز درمانی.
+/// این کلاس مشخص می‌کند که پزشک در کدام مرکز، چه خدمتی را به‌صورت آنلاین ارائه می‌دهد و تعرفه آن چقدر است.
 /// </summary>
-public class CenterDoctorServicePricing : BaseEntityIdentity
+public class CenterDoctorServiceOnlineConsultation : BaseEntityIdentity
 {
     /// <summary>
     /// شناسه پزشک انتخاب‌شده در مرکز درمانی.
@@ -22,26 +22,26 @@ public class CenterDoctorServicePricing : BaseEntityIdentity
     public CenterDoctorsSelected? CenterDoctor { get; set; }
 
     /// <summary>
-    /// شناسه خدمت درمانی یا تخصصی که تعرفه برای آن تعریف شده است.
+    /// شناسه خدمت درمانی یا تخصصی که مشاوره آنلاین برای آن تعریف شده است.
     /// این مقدار الزامی است و به موجودیت <see cref="ProviderServices"/> متصل می‌شود.
     /// </summary>
-    public required int ProviderServicesId { get; set; }
+    public required int ServicesAvailableId { get; set; }
 
     /// <summary>
-    /// شیء خدمت درمانی مرتبط با تعرفه.
+    /// شیء خدمت درمانی مرتبط با مشاوره آنلاین.
     /// رابطه چند‌به‌یک با موجودیت <see cref="ProviderServices"/>.
     /// </summary>
-    public ProviderServices? ProviderServices { get; set; }
+    public required ProviderServices ProviderServices { get; set; }
 
     /// <summary>
-    /// مبلغ تعرفه برای خدمت مورد نظر.
-    /// این مقدار نشان‌دهنده هزینه نهایی خدمت برای بیمار است.
+    /// مبلغ تعرفه مشاوره آنلاین برای خدمت مورد نظر.
+    /// این مقدار نشان‌دهنده هزینه نهایی مشاوره برای بیمار است.
     /// </summary>
     public decimal Price { get; set; }
 
     /// <summary>
-    /// درصد پرداختی به پزشک از مبلغ تعرفه.
-    /// این مقدار می‌تواند برای محاسبه سهم پزشک از درآمد خدمت استفاده شود.
+    /// درصد پرداختی به پزشک از مبلغ مشاوره.
+    /// این مقدار برای محاسبه سهم پزشک از درآمد مشاوره آنلاین استفاده می‌شود.
     /// </summary>
     public float PercentagePayment { get; set; }
 }

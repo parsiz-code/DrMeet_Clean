@@ -1,5 +1,6 @@
 ﻿using DrMeet.Domain.Base;
 using DrMeet.Domain.Centers;
+using DrMeet.Domain.Patients;
 
 namespace DrMeet.Domain.Others;
 
@@ -32,5 +33,6 @@ public class Insurance : BaseEntityIdentity
     /// </summary>
     public bool IsBaseInsurance { get; set; }
     public virtual ICollection<CenterInsurances> CenterInsurances { get; set; } = [];
+    public virtual ICollection<Patient> Patients { get; set; } = [];
 
 }

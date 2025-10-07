@@ -1,4 +1,5 @@
 ﻿using DrMeet.Domain.Base;
+using DrMeet.Domain.Doctors;
 
 namespace DrMeet.Domain.Others;
 
@@ -13,4 +14,5 @@ public class Expertise : BaseEntityIdentity
     /// این مقدار برای نمایش در رابط کاربری و دسته‌بندی تخصص‌ها استفاده می‌شود.
     /// </summary>
     public string Name { get; set; } = string.Empty;
+    public ICollection<DoctorExpertise>? DoctorExpertises { get; set; }
 }

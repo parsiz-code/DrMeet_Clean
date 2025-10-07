@@ -1,8 +1,9 @@
 ﻿using DrMeet.Domain.Base;
 using DrMeet.Domain.Doctors;
+using DrMeet.Domain.Others;
 using DrMeet.Domain.Users;
 
-namespace DrMeet.Domain.Patient;
+namespace DrMeet.Domain.Patients;
 
 /// <summary>
 /// مدل نماینده‌ی بیمار در سیستم.
@@ -28,11 +29,11 @@ public class Patient : BaseEntityPerson
     /// </summary>
     public User User { get; set; }
 
-    /// <summary>
-    /// شناسه‌ی مرکز درمانی که بیمار در آن ثبت شده است (اختیاری).
-    /// می‌تواند برای فیلتر کردن بیماران بر اساس مراکز درمانی استفاده شود.
-    /// </summary>
-    public int? CenterId { get; set; }
+    ///// <summary>
+    ///// شناسه‌ی مرکز درمانی که بیمار در آن ثبت شده است (اختیاری).
+    ///// می‌تواند برای فیلتر کردن بیماران بر اساس مراکز درمانی استفاده شود.
+    ///// </summary>
+    //public int? CenterId { get; set; }
 
     /// <summary>
     /// مسیر یا آدرس تصویر پروفایل بیمار.
@@ -51,6 +52,10 @@ public class Patient : BaseEntityPerson
     /// برای ثبت اطلاعات بیمه‌ی تکمیلی در صورت وجود استفاده می‌شود.
     /// </summary>
     public int? SupplementInsuranceId { get; set; }
+
+
+    public Insurance? Insurance { get; set; }
+    public Insurance? SupplementInsurance { get; set; }
 
     public ICollection<DoctorReserveTime>? DoctorReserveTimes { get; set; }
 }

@@ -19,12 +19,9 @@ public class CenterDoctorServicePricingConfiguration : IEntityTypeConfiguration<
         builder.HasKey(p => p.Id);
 
         // شناسه پزشک: الزامی
-        builder.Property(p => p.DoctorId)
+        builder.Property(p => p.CenterDoctorId)
             .IsRequired();
 
-        // شناسه مرکز درمانی: الزامی
-        builder.Property(p => p.CenterId)
-            .IsRequired();
 
         // شناسه خدمت درمانی: الزامی
         builder.Property(p => p.ProviderServicesId)
@@ -40,16 +37,12 @@ public class CenterDoctorServicePricingConfiguration : IEntityTypeConfiguration<
             .HasColumnType("float");
 
         // رابطه با پزشک
-        builder.HasOne(p => p.Doctor)
-            .WithMany(d => d.CenterDoctorPricing)
-            .HasForeignKey(p => p.DoctorId)
+        builder.HasOne(p => p.CenterDoctor)
+            .WithMany(d => d.CenterDoctorServicePricing)
+            .HasForeignKey(p => p.CenterDoctorId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        // رابطه با مرکز درمانی
-        builder.HasOne(p => p.Center)
-            .WithMany(c => c.CenterDoctorPricing)
-            .HasForeignKey(p => p.CenterId)
-            .OnDelete(DeleteBehavior.Cascade);
+
 
         // رابطه با خدمت درمانی
         builder.HasOne(p => p.ProviderServices)
@@ -58,7 +51,7 @@ public class CenterDoctorServicePricingConfiguration : IEntityTypeConfiguration<
             .OnDelete(DeleteBehavior.Cascade);
 
         // ایندکس ترکیبی برای جلوگیری از ثبت تعرفه تکراری برای یک پزشک در یک مرکز برای یک خدمت خاص
-        builder.HasIndex(p => new { p.DoctorId, p.CenterId, p.ProviderServicesId })
+        builder.HasIndex(p => new { p.CenterDoctorId, p.ProviderServicesId })
             .IsUnique();
     }
 }
@@ -78,13 +71,13 @@ public class CenterDoctorServiceOnlineConsultationConfiguration : IEntityTypeCon
         // کلید اصلی
         builder.HasKey(c => c.Id);
 
-        // شناسه مرکز درمانی: الزامی
-        builder.Property(c => c.CenterId)
-            .IsRequired();
+        //// شناسه مرکز درمانی: الزامی
+        //builder.Property(c => c.CenterId)
+        //    .IsRequired();
 
-        // شناسه پزشک: الزامی
-        builder.Property(c => c.DoctorId)
-            .IsRequired();
+        //// شناسه پزشک: الزامی
+        //builder.Property(c => c.DoctorId)
+        //    .IsRequired();
 
         // شناسه خدمت درمانی: الزامی
         builder.Property(c => c.ServicesAvailableId)
@@ -100,16 +93,11 @@ public class CenterDoctorServiceOnlineConsultationConfiguration : IEntityTypeCon
             .HasColumnType("float");
 
         // رابطه با مرکز درمانی
-        builder.HasOne(c => c.Center)
-            .WithMany(center => center.CenterDoctorServiceOnlineConsultations)
-            .HasForeignKey(c => c.CenterId)
+        builder.HasOne(c => c.CenterDoctor)
+            .WithMany(center => center.CenterDoctorServiceOnlineConsultation)
+            .HasForeignKey(c => c.CenterDoctorId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        // رابطه با پزشک
-        builder.HasOne(c => c.Doctor)
-            .WithMany(doctor => doctor.CenterDoctorServiceOnlineConsultations)
-            .HasForeignKey(c => c.DoctorId)
-            .OnDelete(DeleteBehavior.Cascade);
 
         // رابطه با خدمت درمانی
         builder.HasOne(c => c.ProviderServices)
@@ -118,7 +106,7 @@ public class CenterDoctorServiceOnlineConsultationConfiguration : IEntityTypeCon
             .OnDelete(DeleteBehavior.Cascade);
 
         // ایندکس ترکیبی برای جلوگیری از ثبت تکراری مشاوره آنلاین یک خدمت خاص توسط یک پزشک در یک مرکز
-        builder.HasIndex(c => new { c.CenterId, c.DoctorId, c.ServicesAvailableId })
+        builder.HasIndex(c => new { c.CenterDoctorId,  c.ServicesAvailableId })
             .IsUnique();
     }
 }

@@ -6,19 +6,19 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DrMeet.Persistence.EF.Migrations
 {
     /// <inheritdoc />
-    public partial class CenterInsurances : Migration
+    public partial class addDoctorExpertisestable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "CenterInsurances",
+                name: "DoctorExpertises",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    CenterId = table.Column<int>(type: "int", nullable: true),
+                    DoctorId = table.Column<int>(type: "int", nullable: false),
+                    ExpertiseId = table.Column<int>(type: "int", nullable: false),
                     Deleted = table.Column<bool>(type: "bit", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()"),
                     UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()"),
@@ -26,33 +26,38 @@ namespace DrMeet.Persistence.EF.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CenterInsurances", x => x.Id);
+                    table.PrimaryKey("PK_DoctorExpertises", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CenterInsurances_Centers_CenterId",
-                        column: x => x.CenterId,
-                        principalTable: "Centers",
+                        name: "FK_DoctorExpertises_Doctors_DoctorId",
+                        column: x => x.DoctorId,
+                        principalTable: "Doctors",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DoctorExpertises_Expertises_ExpertiseId",
+                        column: x => x.ExpertiseId,
+                        principalTable: "Expertises",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_CenterInsurances_CenterId",
-                table: "CenterInsurances",
-                column: "CenterId");
+                name: "IX_DoctorExpertises_DoctorId_ExpertiseId",
+                table: "DoctorExpertises",
+                columns: new[] { "DoctorId", "ExpertiseId" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_CenterInsurances_Name_CenterId",
-                table: "CenterInsurances",
-                columns: new[] { "Name", "CenterId" },
-                unique: true,
-                filter: "[CenterId] IS NOT NULL");
+                name: "IX_DoctorExpertises_ExpertiseId",
+                table: "DoctorExpertises",
+                column: "ExpertiseId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CenterInsurances");
+                name: "DoctorExpertises");
         }
     }
 }
