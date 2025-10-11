@@ -1,0 +1,1 @@
+﻿global using DrMeet.Domain.Enums;
